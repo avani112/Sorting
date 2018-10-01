@@ -1,14 +1,8 @@
 #include<iostream>
 using namespace std;
-int main()
+void sort(int *a, int n) //a=>array, n=>length of array
 {
- int i,j,n,t;
- cin>>n;
- int a[n];
- for(i=0;i<n;i++)
- {
-  cin>>a[i];
- }
+ int i,j,t;
  for(i=0;i<n-1;i++)
  {
   for(j=i+1;j<n;j++)
@@ -21,6 +15,17 @@ int main()
    }
   }
  }
+}
+
+int main() {
+	int i, n;
+	cin>>n;
+ int a[n];
+ for(i=0;i<n;i++)
+ {
+  cin>>a[i];
+ }
+ sort(a, n);
  cout<<"---SORTED ARRAY---";
  for(i=0;i<n;i++)
  cout<<"\n"<<a[i];
